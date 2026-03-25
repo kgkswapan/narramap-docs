@@ -1,0 +1,22 @@
+---
+import Default from '@astrojs/starlight/components/Footer.astro';
+
+const footerText = "Welcome Project documentation is maintained in NarraMap DocHub.";
+const parentSiteUrl = "https://example.com";
+const parentSiteLabel = "Back to Welcome Project";
+const contactUrl = "mailto:support@example.com";
+const contactLabel = "Contact support";
+---
+
+<Default {...Astro.props} />
+  {(footerText || parentSiteUrl || contactUrl) && (
+    <div class="dochub-footer">
+      {(parentSiteUrl || contactUrl) && (
+        <div class="dochub-footer-links">
+          {parentSiteUrl && <a href={parentSiteUrl}>{parentSiteLabel}</a>}
+          {contactUrl && <a href={contactUrl}>{contactLabel}</a>}
+        </div>
+      )}
+      {footerText && <p class="dochub-footer-text">{footerText}</p>}
+    </div>
+  )}
