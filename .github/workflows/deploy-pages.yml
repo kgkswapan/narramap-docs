@@ -3,7 +3,7 @@ name: Deploy DocHub site to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - snapshot-publish-test
   workflow_dispatch:
 
 permissions:
