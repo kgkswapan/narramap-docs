@@ -1,4 +1,4 @@
-# Welcome Project User Documentation
+# Welcome Project 2.0.0 User Documentation
 
 This project was exported from NarraMap DocHub as an Astro Starlight site.
 
